@@ -52,6 +52,7 @@
     #include <sys/types.h>
     #include <unistd.h>
     #include <stdint.h>
+    #include <netinet/in.h>
     #ifndef _SOCKET_T_DEFINED
         typedef int socket_t;
         #define _SOCKET_T_DEFINED
