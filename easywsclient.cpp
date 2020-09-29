@@ -222,7 +222,7 @@ class _RealWebSocket : public easywsclient::WebSocket
             }
         }
         while (txbuf.size()) {
-            int ret = ::send(sockfd, (char*)&txbuf[0], (int)txbuf.size(), 0);
+            int ret = (int)::send(sockfd, (char*)&txbuf[0], (int)txbuf.size(), 0);
             if (false) { } // ??
             else if (ret < 0 && (socketerrno == SOCKET_EWOULDBLOCK || socketerrno == SOCKET_EAGAIN_EINPROGRESS)) {
                 break;
